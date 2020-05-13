@@ -1,0 +1,41 @@
+.navbar {
+  flex-direction: column;
+  align-items: center;
+  height: 140px;
+  padding: 20px 0;
+}
+
+.navbar ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin-top: 10px;
+}
+
+.navbar a {
+  padding: 10px 10px;
+  margin: 0px 3px;
+}
+
+.flex-items {
+  flex-direction: column;
+}
+
+.flex-columns .column {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.flex-grid .column {
+  /* I don't understand as to why we must set max-width here
+    Nor do I understand why setting width, as opposed to max-width, doesn't work */
+  max-width: 50%;
+  flex-basis: 50%;
+}
+
+.team img {
+  width: 70%;
+}

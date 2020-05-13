@@ -1,0 +1,172 @@
+/* Text Colours */
+.text-primary {
+  color: #28a745;
+}
+
+.text-secondary {
+  color: #0284d0;
+}
+
+/* Button */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary, .bg-primary {
+  background-color: #28a745;
+  color: #fff;
+
+}
+
+.btn-secondary, .bg-secondary {
+  background-color: #0284d0;
+  color: #fff;
+
+}
+
+.btn-dark, .bg-dark {
+  background-color: #333;
+  color: #fff;
+
+}
+
+.btn-light, .bg-light {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* This is the direct child selector, and means that only direct children of the .flex-items class wil be selected
+  This is different than the standard descendent selector (.flex-items div) because the descendent selector selects all div elements contained within, not
+  just the direct child. So if, for example, we used the direct child selector and we had <section class="flex-items"><div><div> then only the first inner
+  div would be selected, not the most nested one. The most nested one would, however, be selected if we used the descendent selector (.flex-items div) */
+.flex-items > div {
+  padding: 20px;
+}
+
+/* Flex Columns */
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+.flex-columns .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%
+}
+
+
+/* Flexbox Explanation
+
+  flex-basis:
+  If we have two items in a 40em container, each with a flex-basis of 20em, then each will take up exactly 20em of the container, and will distribute the
+  space equally. If the first item has flex-grow and flex shrink */
+.flex-columns .column {
+  display: flex;
+  flex-direction: column;
+  /* If we set 'flex: 1;' then this is equivalent to:
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    Having flex-basis set to 0 means that the item's width will not be deducted from the total container space when its width is being calculated
+    Thus, if all flex-items have a flex-grow of 1 and a flex-basis of 0, each item will take up the same amount of room within the flex container */
+  /* flex-grow: 1;
+  flex-shrink: 1; 
+  flex-basis: 0; */
+  /* flex-basis: 100%; */
+  flex: 1;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%;
+}
+
+.flex-columns img {
+  width:100%;
+  height: 100%;
+  /* This property determines how an img or video element should be resized to fit its container
+    Using the cover value ensures the aspect ration is maintained, meaning the the image is cut, rather than having it shrink to fit the container */
+  object-fit: cover;
+}
+
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.flex-columns h2 {
+  font-size: 40px;
+  font-weight: 100px;
+}
+
+.flex-columns h4 {
+  margin-bottom: 10px;
+}
+
+.flex-columns p {
+  margin: 20px 0;
+}
+
+/* Section Header */
+.section-header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.section-padding {
+  padding: 20px 20px 40px;
+}
+
+/* Flex Grid */
+.flex-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-grid .column {
+  flex: 25%;
+  max-width: 25%;
+  flex-direction: column;
+  padding: 0px 4px;
+}
+
+.flex-grid .column img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
